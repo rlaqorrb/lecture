@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="icon" href="아이콘경로.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <title>HTML/CSS/JS 강의자료 저장소</title>
+  </head>
+  <body class="bg-light">
+
+    <!-- 상단 네브바 -->
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            VS
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">홈</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../lectures.html">강의자료</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- 홈  -->
+
+    <div class="container mt-5">
+      <h6>Visual Studio Code 에디터 : <a href="https://code.visualstudio.com/" target="blank">https://code.visualstudio.com/ <i class="bi bi-box-arrow-up-right"></i></a></h6><br><br>
+      <p class="m-0"><strong>(참고1) Windows와 macOS 버전이 다릅니다. 자신에게 맞는 버전을 다운로드 하세요.</strong></p>
+      <p class="m-0"><strong>(참고2) 에디터 상단의 '파일->파일열기'로 먼저 님들의 작업폴더를 열고 파일을 만들든지 코딩을 하든지 하셔야됩니다.</strong></p>
+      <p class="m-0"><strong>(참고3) ctrl + s 단축키로 파일 저장 잘 하십시오 맥북은 ctrl 대신 command 입니다.</strong></p>
+
+      <h3 class="mt-5">학장(extension)</h3>
+      <p>설치하면 좋은 VSC 확장자</p>
+      <ol>
+        <li>
+          <h5>Auto Rename Tag</h5>
+          <p>여는 태그와 닫는 태그 둘중 하나만 바꿔도 나머지 하나도 자동으로 바뀜.</p>
+          <small>중요도</small>
+          <div class="mb-5 progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+          </div>
+        </li>
+        <li>
+          <h5>Bracket Pair Colorizer2</h5>
+          <p>코드를 작성하다 보면 괄호가 많아서 이게 어디부터 시작되는 괄호인지 헷갈릴때가 있는데<br> 괄호마다 색을 다르게 지정해줘서 보기 편하게 해줌.</p>
+          <small>중요도</small>
+          <div class="mb-5 progress">
+            <div class="progress-bar bg-primary" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
+          </div>
+        </li>
+        <li>
+          <h5>Community Material Theme</h5>
+          <p>VSC의 테마를 바꿔줌. 가장 인기있는 테마.</p>
+          <small>중요도</small>
+          <div class="mb-5 progress">
+            <div class="progress-bar bg-secondary" role="progressbar" style="width: 10%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">10%</div>
+          </div>
+        </li>
+        <li>
+          <h5>CSS Peek</h5>
+          <p>HTML에서 CSS파일을 쉽게 수정할 수 있게함. 버그가 많음.</p>
+          <small>중요도</small>
+          <div class="mb-5 progress">
+            <div class="progress-bar bg-primary" role="progressbar" style="width: 45%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">45%</div>
+          </div>
+        </li>
+        <li>
+          <h5>HTML CSS Support</h5>
+          <p>HTML id and class attribute completion for Visual Studio Code.</p>
+          <small>중요도</small>
+          <div class="mb-5 progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 70%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">70%</div>
+          </div>
+        </li>
+        <li>
+          <h5>HTML to CSS autocompletion</h5>
+          <p>HTML파일에서 지정한 클래스나 아이디 명을 CSS파일에서 자동완성 할수있음.</p>
+          <small>중요도</small>
+          <div class="mb-5 progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">80%</div>
+          </div>
+        </li>
+        <li>
+          <h5>indent-rainbow</h5>
+          <p>들여쓰기(Tab) 1개(기본 4칸)마다 색을 다르게 하여 줄 구분이 쉬워짐.</p>
+          <small>중요도</small>
+          <div class="mb-5 progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">80%</div>
+          </div>
+        </li>
+        <li>
+          <h5>Korean(사용법) Language Pack for Visual Studio Code</h5>
+          <p>VSC의 언어를 한국어로 바꿔줌.</p>
+          <small>중요도</small>
+          <div class="mb-5 progress">
+            <div class="progress-bar bg-danger" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">90%</div>
+          </div>
+        </li>
+        <li>
+          <h5>Live Server</h5>
+          <p>HTML을 실시간으로 브라우저에 띄워줌.</p>
+          <small>중요도</small>
+          <div class="mb-5 progress">
+            <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">100%</div>
+          </div>
+        </li>
+        <li>
+          <h5>Material Icon Theme</h5>
+          <p>파일의 아이콘을 바꿔줌.</p>
+          <small>중요도</small>
+          <div class="mb-5 progress">
+            <div class="progress-bar bg-secondary" role="progressbar" style="width: 10%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">10%</div>
+          </div>
+        </li>
+      </ol>
+
+      <h3 class="mt-5">HTML이란?</h3><br>
+      <h6>HTML이란 Hypertext Markup Language의 약자로 웹페이지를 만들 때 쓴다.<br><br>
+        여기서 Markup Language는 자료의 구조를 표현하기위한 언어다.<br><br>
+        우리가 웹페이지 안에 글넣고 그림넣고 버튼넣는데 그런 자료가<br><br>
+        어디에 위치하는지 그런 것들을 집어넣을수있는 언어가 HTML이다.</h6>
+        <h3 class="mt-5 mb-3">HTML 파일 기본 템플릿</h3>
+        <div class="container">
+          <img src="../../img/htmltemp.png"  style="border-radius: 10px;" alt="">
+        </div>
+        <p class="mt-5">HTML 문서는 .html로 끝나도록 저장하시고<br>모든 HTML 문서는 위의 코드를 가지고 있어야됩니다.<br>&lt;head> 내부엔 사이트 생성에 필요한 인코딩형식, 사이트제목, 필요한 CSS나 JS파일 등이 들어갈 수 있으며<br> &lt;body> 내부엔 실제 웹사이트에서 보여줄 글, 그림 등을 적어주시면 됩니다.</p>
+        <div style="height: 500px;"></div>
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>
