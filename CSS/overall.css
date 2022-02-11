@@ -1,0 +1,67 @@
+.red-marker{
+  color: #E06C6A;
+}
+
+.orange-marker{
+  color: #D19A5E;
+}
+
+.green-marker{
+  color: #98C379;
+}
+
+.gray-marker{
+  color: gray;
+}
+
+.border-radius{
+  border-radius: 10px;
+}
+
+.clip-file{
+  background: rgba(238, 238, 238, 0.301);
+  max-width: 90%;
+  margin: auto;
+  margin-top: 0px;
+
+}
+
+.clip-file>div{
+  display: flex;
+  padding: 10px 0px 10px 0px;
+  border-bottom: 1px solid #eee;
+}
+
+.clip-file h6{
+  font-weight: 900;
+  padding: 10px;
+  border-bottom: gray 5px solid;
+}
+
+.clip-file>div>i{
+  font-size: 20px;
+  padding: 5px 10px 0px 10px;
+  vertical-align: top;
+}
+
+.cilp-file-download{
+  margin-left: auto;
+  font-size: 13px;
+  font-weight: 900;
+  padding: 10px;
+  vertical-align: middle;
+  transform: rotate(0.1deg);
+}
+
+.cilp-file-download a{
+  color: #E06C6A;
+  text-decoration: none;
+}
+
+.clip-file img{
+  border-radius: 500px;
+}
+
+p{
+  margin: 0px 0px 4px 0px;
+}
