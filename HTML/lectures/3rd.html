@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="icon" href="아이콘경로.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../CSS/overall.css">
+    <script src="https://kit.fontawesome.com/6e4abe1f96.js" crossorigin="anonymous"></script>
+    <title>HTML/CSS/JS 강의</title>
+  </head>
+  <body class="bg-light">
+
+    <!-- 상단 네브바 -->
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            VS
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../index.html">홈</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../lectures.html">강의자료</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled active">HTML/CSS 강의 3차시</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- 내용  -->
+    
+    <div class="mt-5 container bg-dark text-light border-radius">
+      <div style="padding-top: 1px;"></div>
+      <div class="mt-4">
+        <p>
+          &lt;<span class="red-marker">p</span> <span class="orange-marker">style</span>=<span class="green-marker">"font-size : 20px; color : red;"</span>> 글자 &lt;/<span class="red-marker">p</span>></p>
+        <div style="height: 1.5rem;"></div>
+      </div>
+    </div>
+    <div class="container my-5">
+      <p>지금까지 우리는 글자에 이런식으로 스타일을 넣었습니다.</p>
+      <p>그런데 style 속성 안에 들어갈 코드가 길어지면</p>
+      <p>HTML이 더러워지기 때문에 이걸 CSS 파일로 빼서 작성할 수 있습니다.</p>
+    </div>
+    <div class="container">
+      <h4>CSS파일을 만든 후 HTML에 첨부하기</h4>
+      <p>우선 작업폴더에 .css로 끝나는 파일 아무거나 하나 만들고</p>
+      <p>HTML 파일로 돌아와서</p>
+    </div>
+    <div class="mt-5 container bg-dark text-light border-radius">
+      <div style="padding-top: 1px;"></div>
+      <div class="mt-4">
+        <p>
+          &lt;<span class="red-marker">link</span> <span class="orange-marker">href</span>=<span class="green-marker">"css파일경로"</span> <span class="orange-marker">rel</span>=<span class="green-marker">"stylesheet"</span>>
+        </p>
+        <div style="height: 1.5rem;"></div>
+      </div>
+    </div>
+    <div class="container mt-5">
+
+      <p>&lt;head>태그 안에 &lt;link>태그를 넣고</p>
+      <p>href라는 속성에 css파일 경로를 지정해놓으면 css파일 이용가능합니다.</p>
+      <br><br>
+      <p>(참고)</p>
+      <ul>
+        <li>
+          <p>만약 style.css 라는 파일을 html파일과 같은 폴더에 만들면</p>
+          <p>"css파일경로"에 "style.css"라고 쓰면 됩니다.</p>
+        </li>
+        <li>
+          <p>만약 css라는 폴더안에 style.css파일이 있으면</p>
+          <p>"css/style.css"라고 쓰시면 됩니다.</p>
+        </li>
+        <li>
+          <p>html파일이 있는 폴더의 이전 폴더에 style.css파일이 있으면</p>
+          <p>"../style.css"라고 쓰시면 됩니다.</p>
+        </li>
+      </ul>
+      <p>이런걸 '상대경로'라고 합니다.</p>
+      <br><br><br>
+      <p>여기까지 하면 css파일에서 스타일 작성이 가능합니다.</p>
+      <p>정확한 방법은</p>
+      <h4 class="mt-5">1. HTML에서 클래스를 만들어줍니다.</h4>
+      <div class="mt-5 container bg-dark text-light border-radius">
+        <div style="padding-top: 1px;"></div>
+        <div class="mt-4">
+          <p>
+            &lt;<span class="red-marker">p</span> <span class="orange-marker">class</span>=<span class="green-marker">"class이름"</span>>글자&lt;/<span class="red-marker">p</span>>
+          </p>
+          <div style="height: 1.5rem;"></div>
+        </div>
+      </div>
+
+      <p class="mt-4">class 속성을 열고 클래스명을 집어넣어줍니다.</p>
+      <p>이때 클래스명은 아무거나 지어도 되는데</p>
+      <p>이 클래스가 어떤 것을 수식하는지 쉽게 알수있게 이름을 지어줍니다.</p>
+
+      <h4></h4>
+    </div>
+    
+
+
+      <div style="height: 400px;"></div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>
