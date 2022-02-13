@@ -1,0 +1,20 @@
+.box{
+  background: slateblue;
+  width: 300px;
+  color: white;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 5px 5px black;
+}
+
+h3{
+  text-align: center;
+  color: red;
+  font-weight: 900;
+  border: 1px solid red;
+  border-radius: 5px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
