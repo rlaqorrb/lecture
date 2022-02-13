@@ -1,0 +1,12 @@
+.left-box {
+  width : 30%;
+  height : 100px;
+  display : inline-block;
+  background: #6887E7;
+}
+.right-box {
+  width : 70%;
+  height : 100px;
+  display : inline-block;
+  background: #EB8770;
+}
