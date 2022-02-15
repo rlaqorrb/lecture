@@ -18,8 +18,24 @@
   color: #61AEEE;
 }
 
+.violet-marker{
+  color: #C678DD;
+}
+
 .border-radius{
   border-radius: 10px;
+}
+
+.border-white{
+  border: 1px solid white;
+}
+
+.show{
+  display: block;
+}
+
+.hide{
+  display: none;
 }
 
 .clip-file{

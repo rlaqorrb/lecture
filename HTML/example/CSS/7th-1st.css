@@ -1,0 +1,15 @@
+.container{
+  width: 800px;
+}
+
+.blog-content{
+  width: 80%;
+  height: 200px;
+  background: #eee;
+}
+
+.blog-img{
+  width: 20%;
+  height: 200px;
+  background: yellow;
+}

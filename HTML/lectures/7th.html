@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="icon" href="아이콘경로.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../CSS/overall.css">
+    <script src="https://kit.fontawesome.com/6e4abe1f96.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <title>HTML/CSS/JS 강의</title>
+  </head>
+  <body class="bg-light">
+
+    <!-- 상단 네브바 -->
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            VS
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../index.html">홈</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../lectures.html">강의자료</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled active">HTML/CSS 강의 7차시</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- 내용  -->
+    <div class="container">
+      <p class="mt-5">이전 강의의 숙제 강좌입니다.</p>
+      <p>몇가지 팁을 주고 풀이까지 합니다.</p>
+      <br><br><br><br><br>
+      <h4>팁0) 레이아웃은 항상 박스부터 만들고 시작하면 됩니다.</h4>
+      <p>만들고 싶은 레이아웃 위에 박스를 그립니다.</p>
+      <img src="../../img/layout-box.png" alt="" class="my-4" width="500px">
+      <p>이런식으로 그리고 이 박들을 저부 &lt;div>로 구현하면 됩니다.</p>
+      <p>그리고 안에 글넣고 그림넣고 하면 끝입니다.</p>
+      <p>여기서 기억해야될게 &lt;div>는 그냥 쓰면 display : block 때문에 위아래로 배치됩니다.</p>
+      <p>좌우로 나란히 배치하고 싶으면 float, 혹은 inline-block 쓰면 됩니다.</p>
+      <br><br><br><br><br>
+      <h4>팁1) margin, padding 속성은 상하좌우 마진을 한꺼번에 줄 수 있습니다.</h4>
+      <div class="my-4 container bg-dark text-light border-radius">
+        <div style="padding-top: 1px;"></div>
+        <div class="my-4">
+          <span class="orange-marker">.box</span> {<br>
+            <span class="green-marker">margin</span> : <span class="orange-marker">10px</span> <span class="violet-marker">auto</span> <span class="orange-marker">30px</span> <span class="violet-marker">auto</span>;<br>
+          }
+        </div>
+        <div style="padding-top: 1px;"></div>
+      </div>
+      <p>margin 이나 padding 속성에 4개의 값을 동시에 집어넣을 수 있는데 4개 값은 각각 상, 우, 하, 좌측을 의미합니다. </p>
+      <br><br><br><br><br>
+      <h4>팁2) PC레이아웃을 만드실 때 항상 container 또는 wrap박스를 만들어놓는게 좋습니다.</h4>
+      <div class="my-4 container bg-dark text-light border-radius">
+        <div style="padding-top: 1px;"></div>
+        <div class="my-4">
+          &lt;<span class="red-marker">div</span> <span class="orange-marker">class</span>=<span class="green-marker">"container"</span>><br>
+          &nbsp;&nbsp;&lt;<span class="red-marker">div</span> <span class="orange-marker">class</span>=<span class="green-marker">"left"</span>>&lt;/<span class="red-marker">div</span>><br>
+          &nbsp;&nbsp;&lt;<span class="red-marker">div</span> <span class="orange-marker">class</span>=<span class="green-marker">"right"</span>>&lt;/<span class="red-marker">div</span>>
+
+          <br>
+          &lt;/<span class="red-marker">div</span>>
+        </div>
+        <div style="padding-top: 1px;"></div>
+      </div>
+      <p>container박스엔 항상 width를 지정해놓는게 좋습니다.</p>
+      <p>그래야 나중에 브라우저화면이 축소되어도 내부 div 박스들이 찌그러지지 않습니다</p>
+      <br><br><br>
+      <button id="show-box" class="btn btn-danger">숙제 풀이 보기</button>
+      <br><br><br>
+    </div>
+    <div id="homework" class="container show bg-dark text-light border-radius">
+      <h4 class="text-center">숙제 해설</h4>
+      <p>먼저 전체 레이아웃을 감싸주는 &lt;div>부터 만들어줍니다.</p>
+      <div class="my-3 container border-white bg-dark text-light border-radius">
+        <div style="padding-top: 1px;"></div>
+        <div class="my-4">
+          &lt;<span class="red-marker">div</span> <span class="orange-marker">class</span> = <span class="green-marker">"container"</span>><br><br>
+          &lt;/<span class="red-marker">div</span>>
+        </div>
+        <div style="padding-top: 1px;"></div>
+      </div>
+      <p>width는 800px 정도 주면 될거같습니다.</p><br><br>
+      <p>그다음으로는 만들고자 하는 레이아웃을 박스로 그려봅니다.</p>
+      <img class="my-3" src="../../img/layout-box.png" alt="" width="400px">
+      <p>박스로 그리고 div를 이용해 만들어줍니다.</p>
+      <div class="my-3 container border-white bg-dark text-light border-radius">
+        <div style="padding-top: 1px;"></div>
+        <div class="my-4">
+          &lt;<span class="red-marker">div</span> <span class="orange-marker">class</span> = <span class="green-marker">"container"</span>><br>
+          &nbsp;&nbsp;&lt;<span class="red-marker">div</span> <span class="orange-marker">class</span> = <span class="green-marker">"blog-content"</span>><br><br>
+          &nbsp;&nbsp;&lt;/<span class="red-marker">div</span>><br>
+          &nbsp;&nbsp;&lt;<span class="red-marker">div</span> <span class="orange-marker">class</span> = <span class="green-marker">"blog-img"</span>><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="red-marker">img</span>><br>
+          &nbsp;&nbsp;&lt;/<span class="red-marker">div</span>>
+
+          <br>
+          &lt;/<span class="red-marker">div</span>>
+        </div>
+        <div style="padding-top: 1px;"></div>
+      </div>
+      <div class="my-3 container border-white bg-dark text-light border-radius">
+        <div style="padding-top: 1px;"></div>
+        <div class="my-4">
+          <span class="orange-marker">.blog-content</span> {<br>
+            &nbsp;&nbsp;width : <span class="orange-marker">80%</span>;
+            <br>
+            &nbsp;&nbsp;height : <span class="orange-marker">200px</span>;
+            <br>
+            &nbsp;&nbsp;background : <span class="blue-marker">#eee</span>;
+            <br>
+          } <br><br>
+          <span class="orange-marker">.blog-img</span> {<br>
+            &nbsp;&nbsp;width : <span class="orange-marker">20%</span>;
+            <br>
+            &nbsp;&nbsp;height : <span class="orange-marker">200px</span>;
+            <br>
+            &nbsp;&nbsp;background : <span class="blue-marker">yellow</span>;
+            <br>
+          }
+        </div>
+        <div style="padding-top: 1px;"></div>
+      </div>
+      <p>만들 레이아웃을 크게 보면 왼쪽에 내용과 오른쪽에 사진이 있습니다.</p>
+      <p>그래서 큰 2개의 박스로 먼저 나누어 주고</p>
+      <p>각각 width를 80%, 20% 줬습니다.</p>
+      <p>배경과 높이는 처음에 만들기 쉬우라고 준겁니다.</p>
+      <p>여기까지 하면 아래와 같이 만들어질겁니다</p>
+      <br>
+      <a href="../example/7th-1st.html" target="blank">예시</a><br>
+      <iframe src="../example/7th-1st.html" width="100%" height="400px" frameborder="0"></iframe>
+      <p>div박스는 display : block을 가지고 있어서 위아래로 배치됩니다.</p>
+      <br><br>
+      <p>따라서 요소를 가로로 배치하는 float나 inline-block을 쓰면 됩니다.</p>
+      <p>여기서는 좀 더 쉬운 float를 사용하겠습니다.</p>
+      <div class="my-3 container border-white bg-dark text-light border-radius">
+        <div style="padding-top: 1px;"></div>
+        <div class="my-4">
+          <span class="orange-marker">.blog-content</span> {<br>
+            &nbsp;&nbsp;width : <span class="orange-marker">80%</span>;
+            <br>
+            &nbsp;&nbsp;height : <span class="orange-marker">200px</span>;
+            <br>
+            &nbsp;&nbsp;background : <span class="blue-marker">#eee</span>;
+            <br>
+            &nbsp;&nbsp;float : <span class="blue-marker">left</span>;
+            <br>
+          } <br><br>
+          <span class="orange-marker">.blog-img</span> {<br>
+            &nbsp;&nbsp;width : <span class="orange-marker">20%</span>;
+            <br>
+            &nbsp;&nbsp;height : <span class="orange-marker">200px</span>;
+            <br>
+            &nbsp;&nbsp;background : <span class="blue-marker">yellow</span>;
+            <br>
+            &nbsp;&nbsp;float : <span class="blue-marker">left</span>;
+            <br>
+          }
+        </div>
+        <div style="padding-top: 1px;"></div>
+      </div>
+      <p>이렇게 float : left를 각각 주면</p><p>아래와 같이 요소가 좌우로 나란히 배치됩니다.</p>
+      <br>
+      <a href="../example/7th-2nd.html" target="blank">예시</a><br>
+      <iframe src="../example/7th-2nd.html" frameborder="0" width="100%" height="240px"></iframe>
+      <br><br>
+      <p>그리고 이제 이미지를 넣어줍니다.</p>
+      <div class="my-3 container border-white bg-dark text-light border-radius">
+        <div style="padding-top: 1px;"></div>
+        <div class="my-4">
+          &lt;<span class="red-marker">div</span> <span class="orange-marker">class</span> = <span class="green-marker">"container"</span>><br>
+          &nbsp;&nbsp;&lt;<span class="red-marker">div</span> <span class="orange-marker">class</span> = <span class="green-marker">"blog-content"</span>><br><br>
+          &nbsp;&nbsp;&lt;/<span class="red-marker">div</span>><br>
+          &nbsp;&nbsp;&lt;<span class="red-marker">div</span> <span class="orange-marker">class</span> = <span class="green-marker">"blog-img"</span>><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="red-marker">img</span> <span class="orange-marker">src</span> = <span class="green-marker">"apple.jpg"</span> <span class="orange-marker">width</span> = <span class="green-marker">"100%"</span>><br>
+          &nbsp;&nbsp;&lt;/<span class="red-marker">div</span>>
+
+          <br>
+          &lt;/<span class="red-marker">div</span>>
+        </div>
+        <div style="padding-top: 1px;"></div>
+      </div>
+      <p>이렇게 이미지를 넣어줍니다.</p>
+      <p>이미지의 속성에는 width가 있는데 css와 비슷하게 사용 가능합니다.</p>
+      <br><br>
+      <p>그러면 이제 왼쪽 박스를 디자인해 봅시다.</p>
+      <div class="my-3 container border-white bg-dark text-light border-radius">
+        <div style="padding-top: 1px;"></div>
+        <div class="my-4">
+          &lt;<span class="red-marker">div</span> <span class="orange-marker">class</span> = <span class="green-marker">"container"</span>><br>
+          &nbsp;&nbsp;&lt;<span class="red-marker">div</span> <span class="orange-marker">class</span> = <span class="green-marker">"blog-content"</span>><br>
+          &nbsp;&nbsp;&lt;<span class="red-marker">div</span>><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="red-marker">img</span> <span class="orange-marker">src</span> = <span class="green-marker">"lion.jpg"</span> <span class="orange-marker">class</span> = <span class="green-marker">"blog-profile"</span>>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="red-marker">h4</span>>이름&lt;/<span class="red-marker">h4</span>>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="red-marker">p</span>>날짜&lt;/<span class="red-marker">p</span>>
+          <br>
+          &nbsp;&nbsp;&lt;/<span class="red-marker">div</span>>          
+          <br>
+          &nbsp;&nbsp;&lt;<span class="red-marker">div</span>>
+          &lt;/<span class="red-marker">div</span>><br>
+          &nbsp;&nbsp;&lt;<span class="red-marker">div</span> <span class="orange-marker">class</span> = <span class="green-marker">"blog-img"</span>><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="red-marker">img</span> <span class="orange-marker">src</span> = <span class="green-marker">"apple.jpg"</span> <span class="orange-marker">width</span> = <span class="green-marker">"100%"</span>><br>
+          &nbsp;&nbsp;&lt;/<span class="red-marker">div</span>>
+
+          <br>
+          &lt;/<span class="red-marker">div</span>>
+        </div>
+        <div style="padding-top: 1px;"></div>
+      </div>
+      <p>왼쪽 박스는 크게 (이름과 사진이있는)윗쪽 박스와</p><p>(내용있는)아랫쪽 박스로 나누어집니다.</p>
+      <p>따라서 div박스를 2개 만들어줍니다.</p>
+      <p>윗쪽 박스에는 이미지와 이름, 날짜가 들어가므로 그것도 만들어 줍니다.</p>
+      
+    </div>
+      
+      <div style="height: 400px;"></div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script>
+      $('#show-box').click(function(){
+        $('#homework').toggle();
+      });
+    </script>
+  </body>
+</html>
