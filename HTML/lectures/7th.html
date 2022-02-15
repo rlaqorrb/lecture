@@ -84,10 +84,12 @@
       <p>container박스엔 항상 width를 지정해놓는게 좋습니다.</p>
       <p>그래야 나중에 브라우저화면이 축소되어도 내부 div 박스들이 찌그러지지 않습니다</p>
       <br><br><br>
+      <p style="color: red;">꼭 먼저 고민 해보고 풀이를 보셔야됩니다.</p>
       <button id="show-box" class="btn btn-danger">숙제 풀이 보기</button>
+
       <br><br><br>
     </div>
-    <div id="homework" class="container show bg-dark text-light border-radius">
+    <div id="homework" class="container hide bg-dark text-light border-radius">
       <h4 class="text-center">숙제 해설</h4>
       <p>먼저 전체 레이아웃을 감싸주는 &lt;div>부터 만들어줍니다.</p>
       <div class="my-3 container border-white bg-dark text-light border-radius">
@@ -227,10 +229,244 @@
         </div>
         <div style="padding-top: 1px;"></div>
       </div>
+      <div class="container border-white bg-dark text-light border-radius">
+        <div style="padding-top: 1px;"></div>
+        <div class="my-4">
+          <span class="orange-marker">.blog-profile</span>{<br>
+            &nbsp;&nbsp;width : <span class="orange-marker">50px</span>
+            <br>
+          }
+        </div>
+        <div style="padding-top: 1px;"></div>
+      </div>
       <p>왼쪽 박스는 크게 (이름과 사진이있는)윗쪽 박스와</p><p>(내용있는)아랫쪽 박스로 나누어집니다.</p>
       <p>따라서 div박스를 2개 만들어줍니다.</p>
       <p>윗쪽 박스에는 이미지와 이름, 날짜가 들어가므로 그것도 만들어 줍니다.</p>
-      
+      <p>그리고 위쪽박스 이미지에 width를 50px 을 줍니다.</p>
+      <p>여기까지 하면 아래와 같이 나올겁니다.</p>
+      <br><br>
+      <a href="../example/7th-3rd.html" target="blank">예시</a><br>
+      <iframe src="../example/7th-3rd.html" width="100%" height="300px" frameborder="0"></iframe>
+      <br><br>
+      <p>그런데 이름이랑 날짜가 위아래로 배치됩니다.</p>
+      <p>그 이유는 h4와 p도 display : block을 가지고 있기때문입니다.</p>
+      <br><br><br>
+      <p>따라서 얘들도 아래와 같이 div로 묶을겁니다.</p>
+      <div class="my-3 container border-white bg-dark text-light border-radius">
+        <div style="padding-top: 1px;"></div>
+        <div class="my-4">
+          &lt;<span class="red-marker">div</span> <span class="orange-marker">class</span> = <span class="green-marker">"container"</span>><br>
+          &nbsp;&nbsp;&lt;<span class="red-marker">div</span> <span class="orange-marker">class</span> = <span class="green-marker">"blog-content"</span>><br>
+          &nbsp;&nbsp;&lt;<span class="red-marker">div</span>><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="red-marker">img</span> <span class="orange-marker">src</span> = <span class="green-marker">"lion.jpg"</span> <span class="orange-marker">class</span> = <span class="green-marker">"blog-profile"</span>>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="red-marker">div</span> <span class="orange-marker">class</span> = <span class="green-marker">"blog-name"</span>>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="red-marker">h4</span>>이름&lt;/<span class="red-marker">h4</span>>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="red-marker">p</span>>날짜&lt;/<span class="red-marker">p</span>>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span class="red-marker">div</span>>
+          <br>
+          &nbsp;&nbsp;&lt;/<span class="red-marker">div</span>>          
+          <br>
+          &nbsp;&nbsp;&lt;<span class="red-marker">div</span>>
+          &lt;/<span class="red-marker">div</span>><br>
+          &nbsp;&nbsp;&lt;<span class="red-marker">div</span> <span class="orange-marker">class</span> = <span class="green-marker">"blog-img"</span>><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="red-marker">img</span> <span class="orange-marker">src</span> = <span class="green-marker">"apple.jpg"</span> <span class="orange-marker">width</span> = <span class="green-marker">"100%"</span>><br>
+          &nbsp;&nbsp;&lt;/<span class="red-marker">div</span>>
+
+          <br>
+          &lt;/<span class="red-marker">div</span>>
+        </div>
+        <div style="padding-top: 1px;"></div>
+      </div>
+      <div class="container border-white bg-dark text-light border-radius">
+        <div style="padding-top: 1px;"></div>
+        <div class="my-4">
+          <span class="orange-marker">.blog-profile</span>{<br>
+            &nbsp;&nbsp;width : <span class="orange-marker">50px</span>;
+            <br>
+            &nbsp;&nbsp;display : <span class="blue-marker">block</span>;
+            <br>
+            &nbsp;&nbsp;float : <span class="blue-marker">left</span>;
+            <br>
+          } <br><br>
+          <span class="orange-marker">.blog-name</span>{<br>
+            &nbsp;&nbsp;float : <span class="blue-marker">left</span>;
+            <br>
+          }
+        </div>
+        <div style="padding-top: 1px;"></div>
+      </div>
+      <p>이미지와 blog-name박스를 float : left로 좌우로 정렬해줍니다.</p>
+      <p>이렇게 스타일을 주면 아래와 같이 됩니다.</p>
+      <br><br>
+      <a href="../example/7th-4th.html" target="blank">예시</a>
+      <iframe src="../example/7th-4th.html" width="100%" height="230px" frameborder="0"></iframe>
+      <br><br>
+      <p>그런데 이름과 날짜 사이에 간격이 보입니다.</p>
+      <p>그 이유는 개발자 도구 열어서 보면 알겠지만</p>
+      <p>h4태그와  p태그는 기본적으로 가지는 margin이 있습니다.</p>
+      <div class="my-3 container border-white bg-dark text-light border-radius">
+        <div style="padding-top: 1px;"></div>
+        <div class="my-4">
+          &lt;<span class="red-marker">h4</span> <span class="orange-marker">style</span> = <span class="green-marker">"margin : 8px"</span>>이름&lt;/<span class="red-marker">h4</span>>
+          <br>
+          &lt;<span class="red-marker">p</span> <span class="orange-marker">style</span> = <span class="green-marker">"margin : 8px"</span>>이름&lt;/<span class="red-marker">p</span>>
+        </div>
+        <div style="padding-top: 1px;"></div>
+      </div>
+      <p>이런식으로 마진을 알아서 조절하면 됩니다.</p>
+      <br><br>
+      <p>그다음으로 아래 박스를 만들어야 됩니다.</p>
+      <div class="my-3 container border-white bg-dark text-light border-radius">
+        <div style="padding-top: 1px;"></div>
+        <div class="my-4">
+          &lt;<span class="red-marker">div</span> <span class="orange-marker">class</span> = <span class="green-marker">"container"</span>><br>
+          &nbsp;&nbsp;&lt;<span class="red-marker">div</span> <span class="orange-marker">class</span> = <span class="green-marker">"blog-content"</span>><br>
+          &nbsp;&nbsp;&lt;<span class="red-marker">div</span>><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="red-marker">img</span> <span class="orange-marker">src</span> = <span class="green-marker">"lion.jpg"</span> <span class="orange-marker">class</span> = <span class="green-marker">"blog-profile"</span>>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="red-marker">div</span> <span class="orange-marker">class</span> = <span class="green-marker">"blog-name"</span>>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="red-marker">h4</span>>이름&lt;/<span class="red-marker">h4</span>>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="red-marker">p</span>>날짜&lt;/<span class="red-marker">p</span>>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span class="red-marker">div</span>>
+          <br>
+          &nbsp;&nbsp;&lt;/<span class="red-marker">div</span>>          
+          <br>
+          &nbsp;&nbsp;&lt;<span class="red-marker">div</span>>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="red-marker">h4</span>>블로그 글&lt;/<span class="red-marker">h4</span>>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="red-marker">p</span>>어쩌구 저쩌구 이러쿵 저러쿵&lt;/<span class="red-marker">p</span>>
+          <br>
+          &nbsp;&nbsp;&lt;/<span class="red-marker">div</span>><br>
+          &nbsp;&nbsp;&lt;<span class="red-marker">div</span> <span class="orange-marker">class</span> = <span class="green-marker">"blog-img"</span>><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="red-marker">img</span> <span class="orange-marker">src</span> = <span class="green-marker">"apple.jpg"</span> <span class="orange-marker">width</span> = <span class="green-marker">"100%"</span>><br>
+          &nbsp;&nbsp;&lt;/<span class="red-marker">div</span>>
+
+          <br>
+          &lt;/<span class="red-marker">div</span>>
+        </div>
+        <div style="padding-top: 1px;"></div>
+      </div>
+      <p>이렇게 하면 아래와 같이 나옵니다.</p>
+      <br>
+      <a href="../example/7th-5th.html" target="blank">예시</a>
+      <iframe src="../example/7th-5th.html" width="100%" height="230px" frameborder="0"></iframe>
+      <br><br>
+      <p>여기서 또 문제가 보이는데 블로그 글과 내용이 위로 가있습니다.</p>
+      <p>그 이유는 프로필 사진과 이름이 float때문에 떠있는 상태라서</p>
+      <p>그 밑에 있는 블로그 글과 내용이 위에 아무것도 없다고 생각해서 위에 붙어있는겁니다.</p>
+      <br>
+      <p>저번 강의때 float를 쓰고 난 다음 쓰는것이 있다고 했습니다.</p>
+      <div class="my-3 container border-white bg-dark text-light border-radius">
+        <div style="padding-top: 1px;"></div>
+        <div class="my-4">
+          &lt;<span class="red-marker">div</span> <span class="orange-marker">style</span> = <span class="green-marker">clear : both;</span>>
+          <br>
+          &nbsp;&nbsp;&lt;<span class="red-marker">h4</span> <span class="orange-marker">style</span> = <span class="green-marker">"margin : 8px"</span>>이름&lt;/<span class="red-marker">h4</span>>
+          <br>
+          &nbsp;&nbsp;&lt;<span class="red-marker">p</span> <span class="orange-marker">style</span> = <span class="green-marker">"margin : 8px"</span>>이름&lt;/<span class="red-marker">p</span>>
+          <br>
+          &lt;/<span class="red-marker">div</span>>
+        </div>
+        <div style="padding-top: 1px;"></div>
+      </div>
+      <p>이렇게 clear : both를 주면 제자리를 찾을겁니다.</p>
+      <p>그러고 나서 뒤에 배경을 지우고</p>
+      <p>전체 박스를 가운데 정렬하면 쓸만한 블로그 레이아웃이 만들어 지겠죠.</p>
+      <br>
+      <p>전체 박스 가운데 정렬은 margin-left : auto; margin-right : auto;를 쓰면 됩니다.</p>
+      <br><br><br>
+      <p>따라서 최종 코드는 아래와 같고</p>
+      <div class="my-3 container border-white bg-dark text-light border-radius">
+        <div style="padding-top: 1px;"></div>
+        <div class="my-4">
+          &lt;<span class="red-marker">div</span> <span class="orange-marker">class</span> = <span class="green-marker">"container"</span>><br>
+          &nbsp;&nbsp;&lt;<span class="red-marker">div</span> <span class="orange-marker">class</span> = <span class="green-marker">"blog-content"</span>><br>
+          &nbsp;&nbsp;&lt;<span class="red-marker">div</span>><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="red-marker">img</span> <span class="orange-marker">src</span> = <span class="green-marker">"lion.jpg"</span> <span class="orange-marker">class</span> = <span class="green-marker">"blog-profile"</span>>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="red-marker">div</span> <span class="orange-marker">class</span> = <span class="green-marker">"blog-name"</span>>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="red-marker">h4</span>>이름&lt;/<span class="red-marker">h4</span>>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="red-marker">p</span>>날짜&lt;/<span class="red-marker">p</span>>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span class="red-marker">div</span>>
+          <br>
+          &nbsp;&nbsp;&lt;/<span class="red-marker">div</span>>          
+          <br>
+          &nbsp;&nbsp;&lt;<span class="red-marker">div</span> <span class="orange-marker">style</span> = <span class="green-marker">clear : both;</span>>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="red-marker">h4</span> <span class="orange-marker">style</span> = <span class="green-marker">"margin : 8px"</span>>이름&lt;/<span class="red-marker">h4</span>>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="red-marker">p</span> <span class="orange-marker">style</span> = <span class="green-marker">"margin : 8px"</span>>이름&lt;/<span class="red-marker">p</span>>
+          <br>
+          &nbsp;&nbsp;&lt;/<span class="red-marker">div</span>>
+          <br>
+          &nbsp;&nbsp;&lt;<span class="red-marker">div</span> <span class="orange-marker">class</span> = <span class="green-marker">"blog-img"</span>><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="red-marker">img</span> <span class="orange-marker">src</span> = <span class="green-marker">"apple.jpg"</span> <span class="orange-marker">width</span> = <span class="green-marker">"100%"</span>><br>
+          &nbsp;&nbsp;&lt;/<span class="red-marker">div</span>>
+
+          <br>
+          &lt;/<span class="red-marker">div</span>>
+        </div>
+        <div style="padding-top: 1px;"></div>
+      </div>
+      <div class="my-3 container border-white bg-dark text-light border-radius">
+        <div style="padding-top: 1px;"></div>
+        <div class="my-4">
+          <span class="orange-marker">.container</span>{<br>
+            width : <span class="orange-marker">800px</span>;
+            <br>
+            margin-left : <span class="blue-marker">auto</span>;
+            <br>
+            margin-right : <span class="blue-marker">auto</span>;
+            <br>
+          } <br><br>
+          <span class="orange-marker">.blog-content</span>{<br>
+            width : <span class="orange-marker">80%</span>;
+            <br>
+            height : <span class="orange-marker">200px</span>;
+            <br>
+            float : <span class="blue-marker">left</span>;
+            <br>
+          } <br><br>
+          <span class="orange-marker">.blog-img</span>{<br>
+            width : <span class="orange-marker">20%</span>;
+            <br>
+            height : <span class="orange-marker">200px</span>;
+            <br>
+            float : <span class="blue-marker">left</span>;
+            <br>
+          } <br><br>
+          <span class="orange-marker">.blog-profile</span>{<br>
+            width : <span class="orange-marker">50px</span>;
+            <br>
+            display : <span class="blue-marker">block</span>;
+            <br>
+            float : <span class="blue-marker">left</span>;
+            <br>
+          } <br><br>
+          <span class="orange-marker">.blog-name</span>{<br>
+            float : <span class="blue-marker">left</span>
+            <br>
+          } <br><br>
+        </div>
+        <div style="padding-top: 1px;"></div>
+      </div>
+      <p>결과는 아래와 같이 나옵니다.</p>
+      <br><br>
+      <a href="../example/7th-6th.html">결과</a><br>
+      <iframe src="../example/7th-6th.html" width="100%" height="230px" frameborder="0"></iframe>
+      <br><br>
+      <p>전체적인 토대는 완성 되었으니 세부적으로 조정하는거는 알아서 하십시오.</p>
     </div>
       
       <div style="height: 400px;"></div>
